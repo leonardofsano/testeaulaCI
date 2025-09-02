@@ -1,16 +1,17 @@
-name: Meu Primeiro Workflow de CI
+name: 01 - Nosso Primeiro Workflow
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
+    paths-ignore:
+      - README.md
 jobs:
   meu-primeiro-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Imprime mensagem de boas-vindas
-        run: echo "Iniciando meu primeiro job!"
+      - name: Exibe RA - Nome
+        run: echo "RA - Nome do Aluno"
       - name: Mostra o diretório de trabalho
         run: pwd
-      - name: Lista arquivos no runner
-        run: ls -la
+      - name: Imprime nome do repositório
+        run: echo "Nome do repositório: ${{ github.repository }}"
