@@ -1,4 +1,4 @@
-name: 01 - Nosso Primeiro Workflow
+name: Meu Primeiro Workflow de CI
 on:
   push:
     branches:
